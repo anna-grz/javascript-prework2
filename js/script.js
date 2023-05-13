@@ -42,12 +42,10 @@ function buttonClicked(argButtonName) {
         ', ' +
         argComputerMove
     );
-    if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
-      printMessage('Wygrywasz!');
-    } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
-      printMessage('Wygrywasz!');
-    } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
-      printMessage('Wygrywasz!');
+    if ((argPlayerMove == 'papier' && argComputerMove == 'kamień') ||
+      (argPlayerMove == 'nożyce' && argComputerMove == 'papier') ||
+      (argPlayerMove == 'kamień' && argComputerMove == 'nożyce')) {
+    printMessage('Wygrywasz!');
     } else if (argPlayerMove == argComputerMove) {
       printMessage('Remis!');
     } else {
